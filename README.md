@@ -39,21 +39,22 @@ A full-stack **Doctor Appointment Booking System** built using **Spring Boot**, 
 
 ## 📁 Project Structure
 
+```
 src/
 ├── main/
-│ ├── java/com/kartikey/docbook/
-│ │ ├── model/ # Entity classes
-│ │ ├── controller/ # MVC Controllers
-│ │ ├── service/ # Business logic
-│ │ ├── repository/ # Spring Data JPA repositories
-│ │ ├── config/ # Security configuration
-│ └── resources/
-│ ├── templates/ # Thymeleaf views
-│ │ ├── patient/
-│ │ ├── doctor/
-│ ├── static/ # CSS/JS if any
-│ └── application.properties
-
+│   ├── java/com/kartikey/docbook/
+│   │   ├── model/               # Entity classes
+│   │   ├── controller/          # MVC Controllers
+│   │   ├── service/             # Business logic
+│   │   ├── repository/          # Spring Data JPA repositories
+│   │   ├── config/              # Security configuration
+│   └── resources/
+│       ├── templates/           # Thymeleaf views
+│       │   ├── patient/
+│       │   ├── doctor/
+│       ├── static/              # CSS/JS if any
+│       └── application.properties
+```
 
 ---
 
@@ -63,16 +64,55 @@ src/
    ```bash
    git clone https://github.com/yourusername/docbook.git
    cd docbook
-2. Set up MySQL (or use H2 for quick test)
+   ```
 
-3. Configure application.properties
+2. **Set up MySQL** (or use H2 for quick test)
 
-spring.datasource.url=jdbc:mysql://localhost:3306/docbook
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
+3. **Configure `application.properties`**
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/docbook
+   spring.datasource.username=root
+   spring.datasource.password=yourpassword
+   spring.jpa.hibernate.ddl-auto=update
+   ```
 
-4. Run the application
+4. **Run the application**
+   ```bash
+   mvn spring-boot:run
+   ```
 
-  mvn spring-boot:run
+5. **Access in browser**
+   ```
+   http://localhost:8080/login
+   ```
 
+---
+
+## 📷 Screenshots
+
+| Login Page | Doctor Dashboard | Patient Booking |
+|------------|------------------|-----------------|
+| ![Login](screenshots/login.png) | ![Doctor](screenshots/doctor.png) | ![Booking](screenshots/book.png) |
+
+---
+
+## 🛡️ Security Details
+- Passwords stored using **BCrypt**
+- Role-based access: `/doctor/**` and `/patient/**` are protected
+- Registration allowed for both roles
+
+---
+
+## 🧠 Future Improvements
+
+- Add doctor calendar view with full scheduling UI
+- Email confirmations for appointments
+- Admin role for managing doctors and patients
+- Pagination and filters on appointment views
+- Responsive design with more advanced UI
+
+---
+
+## 👨‍💻 Author
+
+**Kartikey Saxena**  
