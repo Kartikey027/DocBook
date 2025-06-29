@@ -86,13 +86,6 @@ src/
    http://localhost:8080/login
    ```
 
----
-
-## 📷 Screenshots
-
-| Login Page | Doctor Dashboard | Patient Booking |
-|------------|------------------|-----------------|
-| ![Login](screenshots/login.png) | ![Doctor](screenshots/doctor.png) | ![Booking](screenshots/book.png) |
 
 ---
 
